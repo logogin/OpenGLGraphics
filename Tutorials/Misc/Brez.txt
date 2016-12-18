@@ -1,0 +1,15 @@
+D.Hearn M.Baker ,Computer Graphics
+Prentice-Hall
+
+1) Input end Points (x1,y1), (x2,y2);
+ Store left points on (x0,y0);
+	Plot Forst point.
+2) Calculate constants delta_x, delta_y, 2*delta_y, 2*delta_y-delta_x;
+3) p0=2*delta_y-delta_x - value for desicion
+4) for all k={0..x2-x1}
+ if p_k<0 then next point is (x_k+1,y_k)
+ p_(k+1)=p_k+2*delta_y;
+ else;
+	next point (x_k+1,y_k+1);
+	p_(k+1)=p_k+2*delta_y-delta_x;
+5) retn to 4) (x2-x1) times
